@@ -120,7 +120,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12 form-group">
-                            <button class="btn btn-dark" type="submit">Place order</button>
+                            <a href="{{route('home')}}" class="btn btn-dark bg-dark" type="submit">Place order</a>
                         </div>
                     </div>
                 </form>

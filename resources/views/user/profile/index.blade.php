@@ -29,7 +29,7 @@
         </tr>
         <tr>
             <th scope="row">Verified At</th>
-            <td>{{auth()->user()->email_verified_at}}</td>
+            <td>{{auth()->user()->email_verified_at ? auth()->user()->email_verified_at : 'Still not verified'}}</td>
         </tr>
         <tr>
             <th scope="row">Created At</th>

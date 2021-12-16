@@ -94,7 +94,7 @@
                     <div class="row justify-content-center">
                         <div class="col-md-10">
                             <div class="card">
-                                <div class="card-header">
+                                <div class="card-header {{!auth()->user()->isAdmin ? 'invisible' : ''}} ">
                                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                                         <div class="collapse navbar-collapse" id="navbarNav">
                                             <ul class="navbar-nav">
