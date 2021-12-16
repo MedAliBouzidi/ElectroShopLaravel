@@ -12,9 +12,11 @@ class Command extends Model
     use HasFactory;
 
     protected $fillable = [
-        "qte",
-        "total_price",
-        "address",
+        'qte',
+        'total_price',
+        'address',
+        'user_id',
+        'product_id',
     ];
 
     public function user(): BelongsTo

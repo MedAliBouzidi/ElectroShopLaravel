@@ -28,27 +28,38 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('cart') }}">
                             <i class="fas fa-dolly-flatbed mr-1 text-gray"></i>
-                            Cart<small class="text-gray">(2)</small>
+                            Cart
                         </a>
                     </li>
                     @if (Route::has('login'))
                         @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('logout') }}">
-                                    <i class="fas fa-user-alt mr-1 text-gray"></i>Log out
+                                <a class="nav-link" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class="fas fa-user-alt mr-1 text-gray"></i>
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('users.profile.index') }}">
+                                    <i class="fas fa-user-alt mr-1 text-gray"></i>
+                                    {{ __('Profile') }}
                                 </a>
                             </li>
                         @else
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">
-                                    <i class="fas fa-user-alt mr-1 text-gray"></i>Login
+                                    <i class="fas fa-user-alt mr-1 text-gray"></i>{{__('Login')}}
                                 </a>
                             </li>
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">
-                                        <i class="fas fa-user-alt mr-1 text-gray"></i>Register
+                                        <i class="fas fa-user-alt mr-1 text-gray"></i>{{__('Register')}}
                                     </a>
                                 </li>
                             @endif

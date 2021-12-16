@@ -18,9 +18,11 @@ class CreateProductsTable extends Migration
             $table->string("name");
             $table->double("price");
             $table->string("color");
-            $table->string("desc");
-            $table->string("category");
+            $table->text("desc");
+            $table->enum('category', ['refrigerator', 'washing machine', 'plaque']);
             $table->string("marque");
+            $table->string("image");
+            $table->integer("rate")->default(0);
             $table->timestamps();
         });
     }

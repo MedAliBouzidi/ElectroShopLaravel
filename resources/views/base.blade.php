@@ -35,6 +35,9 @@
         <!-- theme stylesheet-->
         <link rel="stylesheet" href="{{ asset('assets/css/style.default.css') }}" id="theme-stylesheet">
 
+        <!-- tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
         <!-- Custom stylesheet - for your changes-->
         <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
 
@@ -43,8 +46,8 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="antialiased">
-        <div class="page-holder">
+    <body class="antialiased row w-100 justify-content-center">
+        <div class="page-holder col-lg-10">
             <!-- Navbar -->
             @include('layouts.navbar')
 

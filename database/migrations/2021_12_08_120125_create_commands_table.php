@@ -22,6 +22,10 @@ class CreateCommandsTable extends Migration
                 ->constrained("users")
                 ->onUpdate("cascade")
                 ->onDelete("cascade");
+            $table->foreignId("product_id")
+                ->constrained("products")
+                ->onUpdate("cascade")
+                ->onDelete("cascade");
             $table->timestamps();
         });
     }

@@ -12,28 +12,14 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
-        "name",
-        "price",
-        "color",
-        "desc",
-        "category",
-        "marque",
-    ];
-
-    public function refrigerateurs(): BelongsToMany
-    {
-        return $this->belongsToMany(Refrigerateur::class);
-    }
-
-    public function plaques(): BelongsToMany
-    {
-        return $this->belongsToMany(Plaque::class);
-    }
-
-    public function lavelinges(): BelongsToMany
-    {
-        return $this->belongsToMany(LaveLinge::class);
-    }
+            'name',
+            'desc',
+            'color',
+            'price',
+            'category',
+            'marque',
+            'image',
+        ];
 
     public function commands(): BelongsTo
     {

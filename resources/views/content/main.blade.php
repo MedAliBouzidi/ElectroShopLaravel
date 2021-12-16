@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0">
                     <a class="category-item" href="{{ route('shop.index') }}">
-                        <img class="img-fluid" src="{{ asset('assets/img/lave-linge-1.png') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/img/washing-machine-1.png') }}" alt="">
                     </a>
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0">
@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-md-4">
                     <a class="category-item" href="{{ route('shop.index') }}">
-                        <img class="img-fluid" src="{{ asset('assets/img/refrigerateur-1.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/img/refrigerator-1.png') }}" alt="">
                     </a>
                 </div>
             </div>
